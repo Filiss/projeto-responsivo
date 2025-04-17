@@ -12,6 +12,9 @@ body {
   color: #333;
   line-height: 1.6;
 }
+section {
+  padding: 40px 0;
+}
 
 img {
   max-width: 100%;
@@ -25,4 +28,173 @@ a {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
+}
+
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.185);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 100px;
+}
+
+.list a {
+  color: #333;
+  font-weight: bold;
+}
+
+.destaque {
+  display: flex;
+  padding: 90px;
+  background-color: #e9f7ef;
+}
+
+.destaque .container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.text p {
+  max-width: 650px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.resource .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.cta {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.buttonn {
+  width: 175px;
+  background-color: white;
+  color: #4CAF50;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+}
+
+.burguer {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Todas as demais mídias*/
+
+
+/*Typical Deice Breakpoints
+----------------------------------
+
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: de 768px até 992px
+Desktop: de 992px até 1200px
+Grandes telas: acima de 1200px
+
+----------------------------------
+*/
+
+
+/* IMPRESSÃO */
+
+@media screen and (max-width: 768px){
+  .destaque .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .resource .container {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 20px;
+  }
+  .burguer {
+    display: block;
+  }
+
+  .list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    max-height: 0;
+  }
+
+  .list.active {
+    max-height: 200px;
+    padding: 10px;
+    gap: 20px;
+  }
 }
